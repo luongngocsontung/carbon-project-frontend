@@ -1,5 +1,5 @@
+import api from '../clients/axios';
 import { CarbonProject, EvaluationResponseData, EvaluationFormData } from '../types/carbonProject';
-import api from './axiosConfig';
 
 export const carbonProjectApi = {
   // Get all projects
