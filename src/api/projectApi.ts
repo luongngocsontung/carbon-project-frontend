@@ -10,7 +10,8 @@ export const carbonProjectApi = {
 
   // Save a new project
   saveProject: async (projectData: CarbonProject) => {
-    api.post('/projects', projectData);
+    const response = await api.post('/projects', projectData);
+    return response.data;
   },
 
   // Evaluate data
