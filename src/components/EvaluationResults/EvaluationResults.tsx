@@ -20,7 +20,7 @@ export function EvaluationResults({ evaluationData, onSave, isSaving }: Evaluati
         </div>
         <div className="result-item">
           <label>Estimated ROI:</label>
-          <span className="value">{`${evaluationData.estimatedROI}%`}</span>
+          <span className="value">{`${evaluationData.estimatedROI.toFixed(2)}%`}</span>
         </div>
       </div>
       <button onClick={() => onSave()} disabled={isSaving} className="save-button">

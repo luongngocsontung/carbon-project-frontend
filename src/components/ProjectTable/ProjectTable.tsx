@@ -32,7 +32,7 @@ const ProjectTable = ({ projects, isLoading, error }: ProjectTableProps) => {
               <td>{project.location}</td>
               <td>${project.investmentAmount.toLocaleString()}</td>
               <td>{project.carbonCreditsGenerated} tons</td>
-              <td>{`${project.estimatedROI}%`}</td>
+              <td>{`${project.estimatedROI.toFixed(2)}%`}</td>
             </tr>
           ))}
         </tbody>

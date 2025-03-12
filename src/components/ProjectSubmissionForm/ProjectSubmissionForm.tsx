@@ -36,11 +36,13 @@ export function ProjectSubmissionForm({
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="project-form-container">
+      <form onSubmit={handleSubmit} className="project-form">
         {/* Project Name */}
-        <div>
-          <label htmlFor="projectName">Project Name</label>
+        <div className="form-group">
+          <label htmlFor="projectName" className="form-label">
+            Project Name
+          </label>
           <input
             type="text"
             id="projectName"
@@ -48,18 +50,22 @@ export function ProjectSubmissionForm({
             value={formData.projectName}
             onChange={handleChange}
             required
+            className="form-input"
           />
         </div>
 
         {/* Location */}
-        <div>
-          <label htmlFor="location">Location</label>
+        <div className="form-group">
+          <label htmlFor="location" className="form-label">
+            Location
+          </label>
           <select
             id="location"
             name="location"
             value={formData.location}
             onChange={handleChange}
             required
+            className="form-select"
           >
             <option value="">Select a country</option>
             {countries.map((country) => (
@@ -71,8 +77,10 @@ export function ProjectSubmissionForm({
         </div>
 
         {/* Investment Amount */}
-        <div>
-          <label htmlFor="investmentAmount">Investment Amount ($)</label>
+        <div className="form-group">
+          <label htmlFor="investmentAmount" className="form-label">
+            Investment Amount ($)
+          </label>
           <input
             type="number"
             id="investmentAmount"
@@ -81,18 +89,22 @@ export function ProjectSubmissionForm({
             onChange={handleChange}
             min="0"
             required
+            className="form-input"
           />
         </div>
 
         {/* Project Type */}
-        <div>
-          <label htmlFor="projectType">Project Type</label>
+        <div className="form-group">
+          <label htmlFor="projectType" className="form-label">
+            Project Type
+          </label>
           <select
             id="projectType"
             name="projectType"
             value={formData.projectType}
             onChange={handleChange}
             required
+            className="form-select"
           >
             {PROJECT_TYPES.map((type) => (
               <option key={type} value={type}>
@@ -103,7 +115,7 @@ export function ProjectSubmissionForm({
         </div>
 
         {/* Submit Button */}
-        <button type="submit" disabled={isSubmitting}>
+        <button type="submit" disabled={isSubmitting} className="submit-button">
           {isSubmitting ? 'Evaluating...' : 'Evaluate Project'}
         </button>
 

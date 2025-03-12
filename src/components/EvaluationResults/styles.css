@@ -43,6 +43,7 @@
 .save-button {
   background-color: #28a745;
   margin-top: 10px;
+  width: 100%;
 }
 
 .save-button:hover {

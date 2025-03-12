@@ -1,5 +1,5 @@
 /* Form styles */
-form {
+.project-form {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -7,14 +7,14 @@ form {
   margin-bottom: 20px;
 }
 
-label {
+.form-label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-input,
-select {
+.form-input,
+.form-select {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
@@ -23,14 +23,14 @@ select {
   box-sizing: border-box;
 }
 
-input:focus,
-select:focus {
+.form-input:focus,
+.form-select:focus {
   outline: none;
   border-color: #4a90e2;
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
-button {
+.submit-button {
   background-color: #4a90e2;
   color: white;
   padding: 10px 20px;
@@ -41,11 +41,15 @@ button {
   width: 100%;
 }
 
-button:hover {
+.submit-button:hover {
   background-color: #357abd;
 }
 
-button:disabled {
+.submit-button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
+}
+
+.form-group {
+  margin-bottom: 15px;
 }
